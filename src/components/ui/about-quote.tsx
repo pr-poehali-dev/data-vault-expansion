@@ -16,10 +16,10 @@ export function AboutQuote() {
 
           <div className="space-y-4 md:space-y-6">
             <p className="text-base md:text-xl lg:text-2xl xl:text-3xl text-white/90 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom leading-relaxed">
-              В PromptCraft мы верим, что создание впечатляющих цифровых продуктов должно быть доступно каждому. Наша ИИ-платформа превращает ваши идеи в готовые к продакшену интерфейсы за считанные минуты.
+              AdScreen — крупнейший оператор цифровых видеоэкранов в России. Мы верим, что наружная реклама должна быть умной: точной, гибкой и измеримой, как digital.
             </p>
             <p className="text-base md:text-xl lg:text-2xl xl:text-3xl text-white/90 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom leading-relaxed">
-              Дизайнер, исследующий новые концепции, разработчик, ускоряющий свой процесс, или предприниматель, воплощающий видение в жизнь — PromptCraft станет вашим творческим партнером в эпоху ИИ.
+              Малый бизнес, запускающий первую кампанию, или федеральный бренд, охватывающий всю страну — AdScreen станет вашим надёжным партнёром в мире наружной рекламы.
             </p>
           </div>
         </div>
