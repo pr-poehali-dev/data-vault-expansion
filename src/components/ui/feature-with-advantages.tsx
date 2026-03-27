@@ -25,8 +25,9 @@ function Feature() {
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Точный таргетинг</p>
-                  <p className="text-gray-300 text-sm font-open-sans-custom">Выбор локации для показа</p>
+                  <p className="text-white font-open-sans-custom">Лучшие условия оплаты</p>
+                  <p className="text-gray-300 text-sm font-open-sans-custom">Сначала реклама - потом оплата
+Оплата по окончанию периода размещения</p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
