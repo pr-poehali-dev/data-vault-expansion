@@ -29,7 +29,7 @@ export function FloatingNavbar() {
                 <path d="M8.5 8.5l2 3h3l2-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M7 7l1.5 2M17 7l-1.5 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
-              <span className="font-semibold text-lg font-open-sans-custom tracking-tight">AdScreen</span>
+              <span className="font-semibold text-lg font-open-sans-custom tracking-tight">Banner-Box Media</span>
             </div>
           </button>
 
