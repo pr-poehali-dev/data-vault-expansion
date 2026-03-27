@@ -16,15 +16,17 @@ export function FloatingNavbar() {
           <button onClick={() => scrollToSection("home")} className="cursor-pointer">
             <div className="flex items-center gap-2 text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
               <svg
-                fill="currentColor"
+                fill="none"
                 height="1.75em"
                 style={{ flexShrink: 0, lineHeight: 1 }}
                 viewBox="0 0 24 24"
                 width="1.75em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title>PromptCraft</title>
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <title>AdScreen</title>
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+                <path d="M8 21h8M12 17v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="12" cy="10" r="2" fill="currentColor"/>
               </svg>
               <span className="font-semibold text-lg font-open-sans-custom tracking-tight">AdScreen</span>
             </div>
