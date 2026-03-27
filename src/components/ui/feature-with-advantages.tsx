@@ -10,7 +10,7 @@ function Feature() {
             <Badge className="bg-white/10 text-white border-white/20 backdrop-blur-sm">Преимущества</Badge>
           </div>
           <div className="flex gap-2 flex-col">
-            <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-open-sans-custom text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] mx-0 px-0 my-[3px] py-0 text-left font-semibold">Почему Banner-Box Media</h2>
+            <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-open-sans-custom text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] mx-0 px-0 my-[3px] py-0 text-left font-semibold">Banner-Box Media</h2>
             <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-gray-300 font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
               Тысячи экранов, миллионы зрителей — максимальный охват для вашего бренда.
             </p>
