@@ -164,19 +164,6 @@ export function BentoPricing() {
         cta="Заказать"
       />
 
-      <PricingCard
-        titleBadge="ИНДИВИДУАЛЬНО"
-        priceLabel="По запросу"
-        priceSuffix=""
-        features={[
-          "Разработка стратегии под ваш бизнес",
-          "Эксклюзивные локации и спецпроекты",
-          "Приоритетная поддержка 24/7",
-          "Гибкие условия контракта",
-        ]}
-        className="lg:col-span-8"
-        cta="Связаться"
-      />
     </div>
   )
 }
