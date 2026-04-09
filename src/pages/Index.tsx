@@ -10,151 +10,18 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useEffect, useRef } from "react"
 
 export default function Index() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const pricingSectionRef = useRef<HTMLDivElement>(null)
-  const aboutSectionRef = useRef<HTMLDivElement>(null)
-  const contactSectionRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current
-    if (!scrollContainer) return
-
-    const handleWheel = (e: WheelEvent) => {
-      const delta = e.deltaY
-      const currentScroll = scrollContainer.scrollLeft
-      const containerWidth = scrollContainer.offsetWidth
-      const currentSection = Math.round(currentScroll / containerWidth)
-
-      if (currentSection === 2 && pricingSectionRef.current) {
-        const pricingSection = pricingSectionRef.current
-        const isAtTop = pricingSection.scrollTop === 0
-        const isAtBottom = pricingSection.scrollTop + pricingSection.clientHeight >= pricingSection.scrollHeight - 1
-
-        if (delta > 0 && !isAtBottom) {
-          return
-        }
-
-        if (delta < 0 && !isAtTop) {
-          return
-        }
-
-        if (delta < 0 && isAtTop) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 1 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-
-        if (delta > 0 && isAtBottom) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 3 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-      }
-
-      if (currentSection === 3 && aboutSectionRef.current) {
-        const aboutSection = aboutSectionRef.current
-        const isAtTop = aboutSection.scrollTop === 0
-        const isAtBottom = aboutSection.scrollTop + aboutSection.clientHeight >= aboutSection.scrollHeight - 1
-
-        if (delta > 0 && !isAtBottom) {
-          return
-        }
-
-        if (delta < 0 && !isAtTop) {
-          return
-        }
-
-        if (delta < 0 && isAtTop) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 2 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-
-        if (delta > 0 && isAtBottom) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 4 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-      }
-
-      if (currentSection === 4 && contactSectionRef.current) {
-        const contactSection = contactSectionRef.current
-        const isAtTop = contactSection.scrollTop === 0
-        const isAtBottom = contactSection.scrollTop + contactSection.clientHeight >= contactSection.scrollHeight - 1
-
-        if (delta > 0 && !isAtBottom) {
-          return
-        }
-
-        if (delta < 0 && !isAtTop) {
-          return
-        }
-
-        if (delta < 0 && isAtTop) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 3 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-
-        if (delta > 0 && isAtBottom) {
-          e.preventDefault()
-          return
-        }
-      }
-
-      e.preventDefault()
-
-      if (Math.abs(delta) > 10) {
-        let targetSection = currentSection
-        if (delta > 0) {
-          targetSection = Math.min(currentSection + 1, 4)
-        } else {
-          targetSection = Math.max(currentSection - 1, 0)
-        }
-
-        scrollContainer.scrollTo({
-          left: targetSection * containerWidth,
-          behavior: "smooth",
-        })
-      }
-    }
-
-    scrollContainer.addEventListener("wheel", handleWheel, { passive: false })
-    return () => scrollContainer.removeEventListener("wheel", handleWheel)
-  }, [])
-
   return (
-    <main className="relative h-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-x-hidden">
       <LiquidMetalBackground />
 
       <div className="fixed inset-0 z-[5] bg-black/50" />
 
       <FloatingNavbar />
 
-      <div
-        ref={scrollContainerRef}
-        className="relative z-10 flex h-screen w-full overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory hide-scrollbar"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        <section id="home" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
+      <div className="relative z-10">
+        <section id="home" className="flex min-h-screen items-center justify-center px-4 py-20">
           <div className="mx-auto max-w-4xl">
             <div className="text-center px-0 leading-5">
               <h1 className="mb-8 text-balance text-5xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
@@ -169,7 +36,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="features" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
+        <section id="features" className="flex items-center justify-center px-4 py-20">
           <div className="mx-auto max-w-7xl w-full">
             <Feature />
           </div>
@@ -177,9 +44,7 @@ export default function Index() {
 
         <section
           id="pricing"
-          ref={pricingSectionRef}
-          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20 hide-scrollbar"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="relative px-4 pt-24 pb-20"
         >
           <div
             aria-hidden="true"
@@ -202,9 +67,7 @@ export default function Index() {
 
         <section
           id="about"
-          ref={aboutSectionRef}
-          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20 hide-scrollbar"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="relative px-4 pt-24 pb-20"
         >
           <div
             aria-hidden="true"
@@ -231,8 +94,7 @@ export default function Index() {
 
         <section
           id="contact"
-          ref={contactSectionRef}
-          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20"
+          className="relative px-4 pt-24 pb-20"
         >
           <div
             aria-hidden="true"
