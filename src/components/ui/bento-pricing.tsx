@@ -84,19 +84,6 @@ export function BentoPricing() {
       />
 
       <PricingCard
-        titleBadge="БИЗНЕС"
-        priceLabel="от 20 000 ₽"
-        priceSuffix=""
-        features={[
-          "До 50 экранов в выбранных районах",
-          "Таргетинг по времени суток и дням недели",
-          "Поддержка роликов до 30 секунд",
-        ]}
-        className="lg:col-span-4"
-        cta="Заказать"
-      />
-
-      <PricingCard
         titleBadge="СЕТЬ"
         priceLabel="от 100 000 ₽"
         priceSuffix=""
