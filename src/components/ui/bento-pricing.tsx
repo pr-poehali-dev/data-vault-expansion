@@ -70,20 +70,6 @@ export function BentoPricing() {
   return (
     <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2 lg:grid-cols-8">
       <PricingCard
-        titleBadge="СТАРТ"
-        priceLabel="от 5 000 ₽"
-        priceSuffix=""
-        features={[
-          "До 10 экранов на выбор",
-          "Показ роликов до 15 секунд",
-          "Запуск в течение 24 часов",
-          "Базовая статистика показов",
-        ]}
-        className="lg:col-span-3"
-        cta="Начать"
-      />
-
-      <PricingCard
         titleBadge="СЕТЬ"
         priceLabel="от 100 000 ₽"
         priceSuffix=""
